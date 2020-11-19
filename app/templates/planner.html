@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1> This Is The Planner </h1>
+
+{% for event in events %} 
+<div>
+    <p> 
+        {% if event.name == "Frontierer" %}
+            <p> This is going to be {{ event.name }}'s first big gig!</p>
+        {% endif %}   
+    </p>
+
+    <p> 
+        {% if event.name == "Metallica" %}
+            <p> This is going to be {{ event.name }}'s last gig!</p>
+        {% endif %}   
+    </p>
+
+    <p> 
+        {% if event.name == "Spice Girls" %}
+            <p> The {{ event.name }} are returning for one night only!</p>
+        {% endif %}   
+    </p>
+
+</div>
+{% endfor %}
+
+
+{% endblock %}
