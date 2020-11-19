@@ -24,7 +24,19 @@
         {% endif %}   
     </p>
 
+
 </div>
+{% endfor %}
+
+<p>We have recurring Open Mic Nights on the following dates:</p>
+{% for event in events %} 
+
+    <p>
+        {% if event.name == "Open Mic Night" %}
+            <p>  {{ event.date }} </p>
+        {% endif %}   
+    </p>
+
 {% endfor %}
 
 
